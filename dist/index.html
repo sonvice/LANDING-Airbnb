@@ -3,20 +3,27 @@
   <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Document  </title>
+    <title>Document </title>
+    <link rel="stylesheet" href="css/main.css"/>
   </head>
   <body>
     <div class="header">
       <div class="container"><a class="logo" href="#"><span class="logo__text">LOGO</span></a>
         <nav class="header__nav">
           <ul class="header__list">
-            <li class="header__item"><a class="header__link" href="#">registrate</a></li>
-            <li class="header__item"><a class="header__link" href="#">iniciar sesión</a></li>
-            <li class="header__item"> <a class="header__link" href="#">ayuda</a></li>
-            <li class="header__item"> <a href="#">publica tu anuncio</a></li>
+            <div class="header__grup1">
+              <li class="header__item"><a class="header__link" href="#">registrate</a></li>
+              <li class="header__item"><a class="header__link" href="#">iniciar sesión</a></li>
+            </div>
+            <div class="header__grup2">
+              <li class="header__item"> <a class="header__link header__link--ayuda" href="#">ayuda</a></li>
+              <li class="header__item"> <a class="header__link header__link--btn" href="#">publica tu anuncio</a></li>
+            </div>
           </ul>
         </nav>
+        <div class="toggle"><span class="toggle__bar"></span></div>
       </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"></script>
   </body>
 </html>

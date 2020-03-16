@@ -1,2 +1,149 @@
-h1 {
-  color: saddlebrown; }
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.header {
+  background-image: url(../img/banner.jpg);
+  width: 100%;
+  height: 100vh;
+  background-size: cover; }
+  @media (max-width: 768px) {
+    .header {
+      background-image: url(../img/banner-mobile.jpg); } }
+  .header .container {
+    position: relative;
+    margin: 0 auto;
+    top: 1.8rem;
+    display: flex;
+    max-width: 100rem;
+    padding: 0 1.6rem;
+    justify-content: space-between; }
+    @media (max-width: 768px) {
+      .header .container {
+        top: 0; } }
+  .header .logo {
+    font-size: 3.75rem;
+    font-family: Roboto;
+    font-weight: 900;
+    text-decoration: none;
+    color: white; }
+  @media (max-width: 768px) {
+    .header__nav {
+      width: 100%;
+      position: absolute;
+      left: 0;
+      background: #00000094;
+      height: calc(100vh - 60px);
+      top: 60px; } }
+  .header__grup1, .header__grup2 {
+    display: flex; }
+    @media (max-width: 768px) {
+      .header__grup1, .header__grup2 {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 5rem; } }
+  .header__list {
+    display: flex;
+    font-family: 'Roboto';
+    align-items: center;
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: flex-end; }
+    @media (max-width: 768px) {
+      .header__list {
+        flex-direction: column;
+        padding-top: 5rem; } }
+  .header__link--ayuda::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f0dd";
+    position: absolute;
+    right: -0.625rem;
+    top: 0.8125rem; }
+  .header__link--btn {
+    padding: 30px;
+    margin-left: 30px;
+    background: #009243;
+    line-height: 4px;
+    display: block; }
+  .header__link--ayuda {
+    position: relative; }
+  .header__link {
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    text-transform: capitalize; }
+  .header .toggle {
+    position: absolute;
+    width: 80px;
+    height: 60px;
+    right: 0; }
+    @media (min-width: 768px) {
+      .header .toggle {
+        display: none; } }
+    .header .toggle__bar {
+      width: 60px;
+      height: 6px;
+      background: white;
+      position: absolute;
+      top: 42%; }
+    .header .toggle__bar::after {
+      content: '';
+      width: 60px;
+      height: 6px;
+      background-color: white;
+      top: 16px;
+      position: absolute; }
+    .header .toggle__bar::before {
+      content: '';
+      width: 60px;
+      height: 6px;
+      background-color: white;
+      top: -16px;
+      position: absolute; }

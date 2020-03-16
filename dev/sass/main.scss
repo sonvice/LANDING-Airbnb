@@ -1,1 +1,6 @@
-@import '01-base/base' 
+//BASE
+@import '01-base/base' ;
+@import '01-base/reset';
+@import '01-base/typography';
+//LAYOUT
+@import '03-layout/header';
