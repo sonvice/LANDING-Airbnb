@@ -31,10 +31,10 @@
 
     &__nav{
         @media(max-width: 768px){
-            width: 100%;
+            width: 95%;
             position: absolute;
             left: 0;
-            background: #00000094;
+            background: $black;
             height: calc(100vh - 60px);
             top: 60px; 
         }
@@ -42,6 +42,7 @@
 
     &__grup1, &__grup2{
         display: flex;
+        align-items: center;
         @media(max-width: 768px){
             width: 100%;
             display: flex;
@@ -49,6 +50,35 @@
             padding-bottom: 5rem;
         }
     }
+
+    @media(max-width:768px){
+        &__item,&__item--ayuda{
+            position: relative;
+            
+        }
+    
+        &__item:after{
+            content: '';
+            width: 0;
+            height: 3px;
+            z-index: 0;
+            background-color: $green;
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            transition: .3s;
+    
+        }
+    
+        &__item:hover::after,&__item--ayuda:hover::after{
+            width: 100%;
+        }
+    
+    }
+
+    
+
+
 
     &__list{
         display: flex;
@@ -60,6 +90,7 @@
         @media(max-width: 768px){
             flex-direction: column;
             padding-top: 5rem;
+            padding: 5rem 1rem 0;
         }
     }
 
@@ -68,14 +99,26 @@
         position: absolute;
         right: -0.625rem;
         top: 0.8125rem;
+        @media(max-width: 768px){
+            right: -1.625rem;
+            top: -0.1875rem;
+        }
     }
 
     &__link--btn{
-        padding: 30px;
-        margin-left: 30px;
+        padding: 1rem;
+        margin-left: 1.875rem;
         background: $green;
         line-height: 4px;
         display: block;
+        font-size: 1.5rem;
+        color: white;
+        text-transform: capitalize;
+        text-decoration: none;
+        @media(max-width:768px){
+            padding: 1rem;
+            margin-left: 0;
+        }
     }
 
     &__link--ayuda{
@@ -88,6 +131,9 @@
         text-decoration: none;
         padding: 1rem;
         text-transform: capitalize;
+        @media(max-width:768px){
+            padding: 0;
+        }
     }
 
     .toggle{
@@ -95,6 +141,7 @@
         width: 80px;
         height: 60px;
         right: 0;
+        cursor: pointer;
         @media(min-width:768px){
             display: none;
         }

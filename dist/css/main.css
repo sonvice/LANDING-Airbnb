@@ -73,20 +73,36 @@ table {
     color: white; }
   @media (max-width: 768px) {
     .header__nav {
-      width: 100%;
+      width: 95%;
       position: absolute;
       left: 0;
-      background: #00000094;
+      background: #272727;
       height: calc(100vh - 60px);
       top: 60px; } }
   .header__grup1, .header__grup2 {
-    display: flex; }
+    display: flex;
+    align-items: center; }
     @media (max-width: 768px) {
       .header__grup1, .header__grup2 {
         width: 100%;
         display: flex;
         justify-content: space-between;
         padding-bottom: 5rem; } }
+  @media (max-width: 768px) {
+    .header__item, .header__item--ayuda {
+      position: relative; }
+    .header__item:after {
+      content: '';
+      width: 0;
+      height: 3px;
+      z-index: 0;
+      background-color: #009243;
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      transition: .3s; }
+    .header__item:hover::after, .header__item--ayuda:hover::after {
+      width: 100%; } }
   .header__list {
     display: flex;
     font-family: 'Roboto';
@@ -97,7 +113,8 @@ table {
     @media (max-width: 768px) {
       .header__list {
         flex-direction: column;
-        padding-top: 5rem; } }
+        padding-top: 5rem;
+        padding: 5rem 1rem 0; } }
   .header__link--ayuda::after {
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
@@ -105,12 +122,24 @@ table {
     position: absolute;
     right: -0.625rem;
     top: 0.8125rem; }
+    @media (max-width: 768px) {
+      .header__link--ayuda::after {
+        right: -1.625rem;
+        top: -0.1875rem; } }
   .header__link--btn {
-    padding: 30px;
-    margin-left: 30px;
+    padding: 1rem;
+    margin-left: 1.875rem;
     background: #009243;
     line-height: 4px;
-    display: block; }
+    display: block;
+    font-size: 1.5rem;
+    color: white;
+    text-transform: capitalize;
+    text-decoration: none; }
+    @media (max-width: 768px) {
+      .header__link--btn {
+        padding: 1rem;
+        margin-left: 0; } }
   .header__link--ayuda {
     position: relative; }
   .header__link {
@@ -119,11 +148,15 @@ table {
     text-decoration: none;
     padding: 1rem;
     text-transform: capitalize; }
+    @media (max-width: 768px) {
+      .header__link {
+        padding: 0; } }
   .header .toggle {
     position: absolute;
     width: 80px;
     height: 60px;
-    right: 0; }
+    right: 0;
+    cursor: pointer; }
     @media (min-width: 768px) {
       .header .toggle {
         display: none; } }
