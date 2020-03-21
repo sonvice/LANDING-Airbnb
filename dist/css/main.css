@@ -287,6 +287,7 @@ table {
 .header__box {
   padding-top: 11.87rem;
   text-align: center;
+  position: relative;
 }
 
 .header__title {
@@ -298,7 +299,6 @@ table {
 }
 
 .header__paragraph {
-  text-transform: uppercase;
   font-family: Roboto;
   font-size: 1.87rem;
   color: white;
@@ -308,17 +308,26 @@ table {
 
 .header .form {
   background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .header .form__form-box, .header .form__input {
   width: 100%;
   background-color: transparent;
+  overflow: hidden;
 }
 
 .header .form__input {
-  line-height: 100px;
+  line-height: 1.875rem;
+  padding-top: 4.375rem;
   border: none;
   border-bottom: 2px solid white;
+  font-size: 1.5rem;
+  color: white;
+  outline: none;
 }
 
 .header .form__section {
@@ -338,20 +347,53 @@ table {
   font-weight: 600;
 }
 
+.header .form__section label span {
+  position: absolute;
+  bottom: 0.375rem;
+  transition: .3s all ease;
+}
+
+.header .form__section label::after {
+  content: '';
+  width: 100%;
+  position: absolute;
+  border-bottom: 3px solid #009243;
+  left: 0;
+  bottom: -1px;
+  transition: all .3s ease;
+  transform: translateX(-120%);
+}
+
+.header .form__section input:focus + label span,
+.header .form__section input:valid + label span {
+  transform: translateY(-150%);
+  font-size: 1.2rem;
+  color: #eae7e7;
+  font-weight: 400;
+}
+
+.header .form__section input:focus + label::after,
+.header .form__section input:valid + label::after {
+  transform: translateX(0);
+}
+
 .header .form__btn-link {
   text-align: center;
 }
 
-.header .form__btn-link a {
+.header .form__btn-link input {
   background-color: #ff9310;
   font-size: 1.5rem;
   padding: 36px 110px;
   background-color: #ff9310;
   display: block;
   border-radius: 5px;
-  margin-top: 30px;
+  margin: 2.5rem 0 2.5rem;
   text-decoration: none;
   color: white;
   font-weight: bold;
   font-family: Roboto;
+  width: 100%;
+  border: none;
+  cursor: pointer;
 }

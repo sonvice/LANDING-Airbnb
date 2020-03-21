@@ -205,6 +205,7 @@
     &__box{
         padding-top: 11.87rem;
         text-align: center;
+        position: relative;
     }
     &__title{
         font-size: 3.75rem;
@@ -215,7 +216,6 @@
     }
 
     &__paragraph{
-        text-transform: uppercase;
         font-family: Roboto;
         font-size: 1.87rem;
         color: white;
@@ -224,16 +224,25 @@
     }
 
     .form{
-       background-color: rgba(0,0,0,.6);
+    background-color: rgba(0,0,0,.6);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
         &__form-box, &__input {
         width: 100%;
         background-color: transparent;
+        overflow: hidden;
         }
 
         &__input{
-            line-height: 100px;
+            line-height: 1.875rem;
+            padding-top: 4.375rem;
             border: none;
             border-bottom: 2px solid white;
+            font-size: 1.5rem;
+            color: white;
+            outline: none;
         }
 
         &__section{
@@ -249,23 +258,55 @@
                 color: white;
                 font-family: Roboto;
                 font-weight: 600;
+                
+                span{
+                    position: absolute;
+                    bottom: 0.375rem;
+                    transition: .3s all ease;
+                }
+
+            }
+            label::after{
+                content: '';
+                width: 100%;
+                position: absolute;
+                border-bottom: 3px solid $green;
+                left: 0;
+                bottom: -1px;
+                transition: all .3s ease;
+                transform: translateX(-120%);
+            }
+
+            input:focus + label span,
+            input:valid + label span {
+                transform: translateY(-150%);
+                font-size: 1.2rem;
+                color: #eae7e7;
+                font-weight: 400;
+            }
+            input:focus + label::after ,
+            input:valid + label::after {
+                transform: translateX(0);
             }
         }
 
     &__btn-link{
         text-align: center;
-        a{
+        input{
             background-color: $orange;
             font-size: 1.5rem;
             padding: 36px 110px;
             background-color: #ff9310;
             display: block;
             border-radius: 5px;
-            margin-top: 30px;
+            margin: 2.5rem 0 2.5rem;
             text-decoration: none;
             color: white;
             font-weight: bold;
             font-family: Roboto;
+            width: 100%;
+            border: none;
+            cursor: pointer;
         }
     }
 

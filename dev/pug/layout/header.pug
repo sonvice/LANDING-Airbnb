@@ -21,32 +21,32 @@
     .container
         .header__box
             h1.header__title nuestra casa es tu casa
-            p.header__paragraph alquila espacios únicos y alójate con anfitriones de 90 países 
+            p.header__paragraph Alquila espacios únicos y alójate con anfitriones de 90 países 
     .form
         .container
             .form__form-box
                 .form__destination.form__section
-                    input(type="text")(autocomplete="off")(require)(class="form__input")
+                    input(type="text")(autocomplete="off")(required)(class="form__input")
                     label(for="destino")
                         span| ¿A dónde quieres ir?
                         
                 .form__arrival.form__section
-                    input(type="text")(autocomplete="off")(require)(class="form__input") 
+                    input(type="text")(autocomplete="off")(required)(class="form__input") 
                     label(for="llegada")
                         span| Llegada
                         
                 .form__axit.form__section
-                    input(type="text")(autocomplete="off")(require)(class="form__input")
+                    input(type="text")(autocomplete="off")(required)(class="form__input")
                     label(for="salida")
                         span| Salida
 
                 .form__guest.form__section
-                    input(type="text")(autocomplete="off")(require)(class="form__input")
+                    input(type="text")(autocomplete="off")(required)(class="form__input")
                     label(for="huesped")
                         span| Huesped
                 .form__btn
                     .form__btn-link
-                        a(href="") BUSCAR
+                        input(type="submit" value="BUSCAR") 
 
 
 
