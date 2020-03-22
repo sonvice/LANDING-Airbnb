@@ -53,20 +53,7 @@ table {
   border-spacing: 0;
 }
 
-.header {
-  background-image: url(../img/banner.jpg);
-  width: 100%;
-  height: 100vh;
-  background-size: cover;
-}
-
-@media (max-width: 768px) {
-  .header {
-    background-image: url(../img/banner-mobile.jpg);
-  }
-}
-
-.header .container {
+.container {
   position: relative;
   margin: 0 auto;
   top: 1.8rem;
@@ -77,8 +64,21 @@ table {
 }
 
 @media (max-width: 768px) {
-  .header .container {
+  .container {
     top: 0;
+  }
+}
+
+.header {
+  background-image: url(../img/banner.jpg);
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+}
+
+@media (max-width: 768px) {
+  .header {
+    background-image: url(../img/banner-mobile.jpg);
   }
 }
 
@@ -549,4 +549,8 @@ table {
     height: 3.75rem;
     border-radius: 0;
   }
+}
+
+.grid__legend {
+  background-color: #8c1720;
 }
