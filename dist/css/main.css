@@ -88,6 +88,11 @@ table {
   font-weight: 900;
   text-decoration: none;
   color: white;
+  transition: all ease .3s;
+}
+
+.header .logo:hover {
+  color: #009243;
 }
 
 @media (max-width: 768px) {
@@ -186,6 +191,25 @@ table {
   }
 }
 
+.header__sub {
+  min-width: 7.875rem;
+  position: absolute;
+  top: 3.125rem;
+  display: none;
+}
+
+.header__sub a {
+  display: block;
+  background: #009243;
+  padding: 1rem 1.625rem;
+  text-decoration: none;
+  color: white;
+}
+
+.header__sub a:hover {
+  background-color: #ff9310;
+}
+
 .header__link--btn {
   padding: 1rem;
   margin-left: 1.875rem;
@@ -202,11 +226,16 @@ table {
   .header__link--btn {
     padding: 1rem;
     margin-left: 0;
+    font-size: 1.2rem;
   }
 }
 
 .header__link--ayuda {
   position: relative;
+}
+
+.header__item:hover .header__sub {
+  display: block;
 }
 
 .header__link {
@@ -215,11 +244,20 @@ table {
   text-decoration: none;
   padding: 1rem;
   text-transform: capitalize;
+  transition: all .3s;
+}
+
+.header__link:hover {
+  background-color: #009243;
 }
 
 @media (max-width: 768px) {
   .header__link {
     padding: 0;
+    font-size: 1.2rem;
+  }
+  .header__link:hover {
+    background-color: initial;
   }
 }
 
@@ -284,10 +322,33 @@ table {
   border-radius: 0.312rem;
 }
 
+.header__nuestra {
+  height: 37.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .header__nuestra {
+    height: 18rem;
+  }
+}
+
 .header__box {
   padding-top: 4rem;
   text-align: center;
   position: relative;
+}
+
+@media (min-width: 768px) {
+  .header__box {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 .header__title {
@@ -296,6 +357,12 @@ table {
   font-family: Roboto;
   font-weight: 900;
   color: white;
+}
+
+@media (min-width: 769px) {
+  .header__title {
+    font-size: 3.75rem;
+  }
 }
 
 .header__paragraph {
@@ -314,6 +381,15 @@ table {
   right: 0;
 }
 
+@media (min-width: 769px) {
+  .header .form {
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 .header .form .container {
   top: 0;
 }
@@ -324,7 +400,7 @@ table {
   overflow: hidden;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .header .form__form-box, .header .form__input {
     display: flex;
   }
@@ -339,10 +415,21 @@ table {
   outline: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .header .form__input {
     border-bottom: 0;
     background: white;
+    height: 100%;
+    padding-top: .5rem;
+    color: #272727;
+    box-sizing: border-box;
+    padding-left: .5rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .header .form__guest.form__section {
+    border-right: 0px;
   }
 }
 
@@ -350,9 +437,9 @@ table {
   position: relative;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .header .form__section {
-    border-right: 2px solid black;
+    border-right: 2px solid #595959;
   }
 }
 
@@ -369,10 +456,23 @@ table {
   font-weight: 600;
 }
 
+@media (min-width: 768px) {
+  .header .form__section label {
+    color: #595959;
+  }
+}
+
 .header .form__section label span {
   position: absolute;
   bottom: 0.375rem;
   transition: .3s all ease;
+}
+
+@media (min-width: 768px) {
+  .header .form__section label span {
+    bottom: 1.2rem;
+    left: .5rem;
+  }
 }
 
 .header .form__section label::after {
@@ -386,6 +486,12 @@ table {
   transform: translateX(-120%);
 }
 
+@media (min-width: 769px) {
+  .header .form__section label::after {
+    display: none;
+  }
+}
+
 .header .form__section input:focus + label span,
 .header .form__section input:valid + label span {
   transform: translateY(-150%);
@@ -394,9 +500,26 @@ table {
   font-weight: 400;
 }
 
+@media (min-width: 769px) {
+  .header .form__section input:focus + label span,
+  .header .form__section input:valid + label span {
+    transform: translateY(-200%);
+  }
+}
+
 .header .form__section input:focus + label::after,
 .header .form__section input:valid + label::after {
   transform: translateX(0);
+}
+
+.header .form__btn {
+  width: 11.25rem;
+}
+
+@media (max-width: 768px) {
+  .header .form__btn {
+    width: initial;
+  }
 }
 
 .header .form__btn-link {
@@ -420,8 +543,10 @@ table {
   cursor: pointer;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .header .form__btn-link input {
     margin: 0;
+    height: 3.75rem;
+    border-radius: 0;
   }
 }
