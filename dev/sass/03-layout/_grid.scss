@@ -1,7 +1,47 @@
 
 .grid{
+    font-family: Roboto;
+
+    &__box{
+        margin-top: 1.875rem;
+    }
 
     &__legend{
         background-color: $red;
+        padding: 0.625rem;
+        text-align: center;
+        p:first-child{
+            font-size: 24px;
+            padding: 0.625rem;
+            font-weight: 700;
+        }
+        p{
+            font-size: 1.125rem;
+            color: white;
+            padding: 0.625rem;
+            font-weight: inherit;
+        }
+
+    }
+
+    &__logo{
+        font-weight: 900;
+        text-decoration: none;
+        color: white;
+        font-size: 2.75rem;
+    }
+
+    &__title{
+        text-align: center;
+        color: $grey;
+        h2{
+        padding: 0.625rem;
+        font-size: 1.875rem;
+        font-weight: 900;
+        }
+        p{
+        font-size: 1.125rem;
+        padding: 0.375rem;
+        }
     }
 }

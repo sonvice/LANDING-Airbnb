@@ -551,6 +551,52 @@ table {
   }
 }
 
+.grid {
+  font-family: Roboto;
+}
+
+.grid__box {
+  margin-top: 1.875rem;
+}
+
 .grid__legend {
   background-color: #8c1720;
+  padding: 0.625rem;
+  text-align: center;
+}
+
+.grid__legend p:first-child {
+  font-size: 24px;
+  padding: 0.625rem;
+  font-weight: 700;
+}
+
+.grid__legend p {
+  font-size: 1.125rem;
+  color: white;
+  padding: 0.625rem;
+  font-weight: inherit;
+}
+
+.grid__logo {
+  font-weight: 900;
+  text-decoration: none;
+  color: white;
+  font-size: 2.75rem;
+}
+
+.grid__title {
+  text-align: center;
+  color: #595959;
+}
+
+.grid__title h2 {
+  padding: 0.625rem;
+  font-size: 1.875rem;
+  font-weight: 900;
+}
+
+.grid__title p {
+  font-size: 1.125rem;
+  padding: 0.375rem;
 }
