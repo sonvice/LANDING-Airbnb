@@ -5,13 +5,18 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Document 
         link(rel="stylesheet", href="css/main.css")
+        <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
         
     body
         block header 
             include ../layout/header
         block grid
             include ../layout/grid
+        block slide
+            include ../layout/slide
 
         script(src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js")
+        script(src="")
+        <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
         script(src="js/script.js")
         

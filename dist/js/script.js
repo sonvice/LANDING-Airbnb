@@ -8,3 +8,16 @@ toogle.addEventListener('click', function(){
    nav.classList.toggle('active')
 })
 
+// Initialize Swiper 
+var swiper = new Swiper('.swiper-container', {
+   loop: false,
+   pagination: {
+      el: '.swiper-pagination',
+      type: 'progressbar',
+   },
+   navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+   },
+});
+

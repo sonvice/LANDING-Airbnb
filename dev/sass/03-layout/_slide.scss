@@ -1,0 +1,40 @@
+.swiper-container {
+    width: 100%;
+    height: 32rem;
+    margin-top: 6.25rem;
+    @media(max-width: 512px){
+        height: 30rem;
+    }
+}
+
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill{
+    background: $red !important;
+}
+
+.swiper-slide{
+    picture{
+        display: block;
+        height: 100%;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.swiper-button-next::after{
+    font-family: "Font Awesome 5 Free" !important;
+    font-weight: 900; 
+    content: "\f138" !important;
+    color: $red;
+    padding-right: 3.125rem;
+}
+
+.swiper-button-prev::after{
+    font-family: "Font Awesome 5 Free" !important;
+    font-weight: 900; 
+    content: "\f137" !important;
+    color: $red;
+    padding-left: 3.125rem;
+}
