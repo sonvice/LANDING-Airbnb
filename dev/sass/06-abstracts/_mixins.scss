@@ -1,12 +1,12 @@
 
-@mixin btn($colorHover, $colorBackground) {
+@mixin btn($colorHover, $colorBackground,$position) {
     text-decoration: none;
     padding: 1.2rem 3rem;
     display: inline-block;
     background: $colorBackground;
     color: white;
     font-size: 1.2rem;
-    position: relative;
+    position: $position;
     z-index: 0;
     overflow: hidden;
     &:hover::before{

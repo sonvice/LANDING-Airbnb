@@ -34,6 +34,9 @@
             color: white;
             padding: 0.625rem;
             font-weight: inherit;
+            @media(max-width: 768px){
+                line-height: 1.625rem;
+            }
         }
 
     }
@@ -138,8 +141,9 @@
     &__btn{
         text-align: center;
         padding-top: 3rem;
+        
         a{
-            @include btn($red, $grey);
+            @include btn($red, $grey, relative);
         }
     }
 
