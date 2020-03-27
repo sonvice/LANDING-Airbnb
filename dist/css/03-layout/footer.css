@@ -1,0 +1,33 @@
+.footer .container {
+  max-width: 1380px;
+  position: inherit;
+}
+
+.footer {
+  background-color: #2f2f2f;
+  font-family: 'Roboto';
+}
+
+.footer__box {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  width: 100%;
+}
+
+.footer__list {
+  padding: 1rem 0;
+}
+
+.footer__link {
+  text-decoration: none;
+  padding: .4rem 0;
+  display: block;
+  color: white;
+}
+
+.footer__list ul li:first-child {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: .6rem 0;
+}
