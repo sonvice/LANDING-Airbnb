@@ -109,8 +109,9 @@ justify-content: space-between;
     &__link--ayuda::after{
         font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f0dd";
         position: absolute;
-        right: -0.625rem;
-        top: 0.8125rem;
+        right: .1rem;
+        top: 1.2rem;
+        font-size: 1.2rem;
         @media(max-width: 768px){
             right: -1.625rem;
             top: -0.1875rem;
@@ -123,6 +124,7 @@ justify-content: space-between;
         position: absolute;
         top: 3.125rem;
         display: none;
+        z-index: 2;
     
         a{
             display: block;
@@ -165,7 +167,7 @@ justify-content: space-between;
         font-size: 1.5rem;
         color: white;
         text-decoration: none;
-        padding: 1rem;
+        padding: 1.2rem;
         text-transform: capitalize;
         transition:  all .3s;
         &:hover{
@@ -239,19 +241,17 @@ justify-content: space-between;
     }
 
     &__nuestra{
-        height: 37.5rem;
+        height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        @media(max-width: 768px){
-            height: 18rem;
-        }
+        padding: 0 1rem;
     }
 
     &__box{
-        padding-top: 4rem;
         text-align: center;
         position: relative;
+        padding-bottom: 20rem;
         @media(min-width: 768px){
             width: 100%;
             height: 200px;
@@ -261,7 +261,7 @@ justify-content: space-between;
         }
     }
     &__title{
-        font-size: 2.75rem;
+        font-size: 2.2rem;
         text-transform: uppercase;
         font-family: Roboto;
         font-weight: 900;
@@ -273,10 +273,13 @@ justify-content: space-between;
 
     &__paragraph{
         font-family: Roboto;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         color: white;
         font-weight: 600;
         padding-top: 1rem;
+        @media(min-width: 769px){
+            font-size: 2rem;
+        }
     }
 
     .form{
@@ -304,11 +307,15 @@ justify-content: space-between;
         }
         }
 
+        &__form-box{
+            padding: .5rem 0;
+        }
+
         &__input{
             padding-top: 1.375rem;
             border: none;
             border-bottom: 2px solid white;
-            font-size: 1.5rem;
+            font-size: 1rem;
             color: white;
             outline: none;
             @media(min-width: 769px){
@@ -319,7 +326,7 @@ justify-content: space-between;
             color: $black;
             box-sizing: border-box;
             padding-left: .5rem;
-
+            font-size: 1.5rem;    
             }
         }
 
@@ -413,10 +420,14 @@ justify-content: space-between;
             width: 100%;
             border: none;
             cursor: pointer;
+            transition: .3s ease-in-out;
             @media(min-width: 769px){
                 margin: 0;
                 height: 3.75rem;
                 border-radius: 0;
+            }
+            &:hover{
+                background-color: $green;
             }
         }
     }
